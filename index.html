@@ -30,10 +30,95 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	
+	.languages {
+		text-align: center;
+    		vertical-align: middle;
+	}
+	
+	.toggleBRId {
+		display: block;
+		
+	}
+	
+	.toggleUSId {
+		display: none;
+		
+	}
+	
+	
+	input[type=checkbox]
+	{
+		width: 30px;
+		height: 20px;
+		appearance: none;
+		background-color: #7FFFD4;
+		border-radius: 15px;
+		box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.4);
+		cursor: pointer;
+		border: none;
+		transition: .4s;
+		align-content: center;
+		position: relative;
+		left: 7px;
+		top: 0;
+	}
+	
+	input[type=checkbox]:before
+	{
+		content: "";
+		width: 15px;
+		height: 15px;
+		background-color: green;
+		border-radius: 15px;
+		position: absolute;
+		margin-top: 2.5px;
+		margin-left: 3.5px;
+		box-shadow: 0px 4px 8px 1px rgba(255, 255, 0, 0.1);
+		transform: scale(1.1);
+		top: 0;
+		left: 0;
+		transition: .4s;
+	
+	}
+
+	input:checked[type=checkbox]
+	{
+		background-color: #ffffff;
+	}	
+
+	input:checked[type=checkbox]:before
+	{
+		left: 8px;
+		background-color: #0000CD;
+	}
+	
+	 
+	.imgCinza {
+	    -webkit-transition: all 0.8s linear;
+	    -moz-transition: all 0.8s linear;
+	    transition: all 0.4s linear;
+	    filter: url("data:image/svg+xml;utf8,<svg xmlns="\'http://www.w3.org/2000/svg\'"><filter id="\'grayscale\'"><feColorMatrix type="\'matrix\'" values="\'0.3333" 0.3333="" 0="" 1="" 0\'=""></feColorMatrix></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	    filter: gray; /* IE6-9 */
+	    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	}
+
+}	
 
     </style>    
   
   </head>
+	<header class="w3-container w3-content w3-animate-right w3-right-align w3-margin-top">
+			
+	<div class="logo_modes w3-animate-right">
+				
+		<div>
+			<span class="languages iconAndTextPT-BR" style="color: green"><img id="imgColorBR" class="colorBR" src="https://i.imgur.com/uH7LBoG.png"><b>&nbspPT-BR</b></span>
+			<input class="languages" type="checkbox" id="switch" name="switch" />					
+			<span class="languages w3-margin-left iconAndTextEN-US" style="color: gray"><img id="imgColorUS" class="imgCinza" src="https://i.imgur.com/TbtRYDm.png"><b>&nbspEN-US</b></span>						
+		</div>				
+	</div>
+	</header>
 
   <body class="w3-light-gray" cz-shortcut-listen="true">
   
@@ -51,29 +136,52 @@
               <img src="https://i.imgur.com/CmlZV1c.jpg" style="width: 80%; border-radius: 1000px" alt="Avatar">
             </div>
 
-            <div class="w3-container w3-light-grey" style="text-align: center">
-              <p class="w3-text-brown" style="font-size: 24px; line-height: 22px"><b>Eduardo Paulini Teodoro<br></b><i class="w3-text-black" style="font-size: 15px">Desenvolvedor Back-End Java | SAP Hybris</i></p>
+	    <!-- PT-BR -->
+            <div class="w3-container w3-light-grey toggleBRId" style="text-align: center">
+              <p class="w3-text-brown toggleBRId" style="font-size: 24px; line-height: 22px"><b>Eduardo Paulini Teodoro<br></b><i class="w3-text-black" style="font-size: 15px">Desenvolvedor Back-End Java | SAP Hybris</i></p>
+            </div>
+            <!-- EN-US -->
+            <div class="w3-container w3-light-grey toggleUSId" style="text-align: center">
+              <p class="w3-text-brown toggleUSId" style="font-size: 24px; line-height: 22px"><b>Eduardo Paulini Teodoro<br></b><i class="w3-text-black" style="font-size: 15px">Back-End Java Developer | SAP Hybris</i></p>
             </div>
             
-			<div class="w3-container w3-xxlarge w3-text-brown icon-box">
-			  <a href="https://www.github.com/GHEPT" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-              <a href="https://www.linkedin.com/in/epteodoro" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-			  <a href="https://wa.link/ygyqpm" target="_blank"><i class="fa fa-whatsapp w3-hover-opacity"></i></a>
-			  <a href="mailto:teodoro.edu@hotmail.com?subject=Oportunidade | Java" target="_blank"><i class="fa fa-mail-forward w3-hover-opacity"></i></a>
+	    <div class="w3-container w3-xxlarge w3-text-brown icon-box">
+	      <a href="https://www.github.com/GHEPT" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+	      <a href="https://www.linkedin.com/in/epteodoro" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+	      <a href="https://wa.link/ygyqpm" target="_blank"><i class="fa fa-whatsapp w3-hover-opacity"></i></a>
+	      <a href="mailto:teodoro.edu@hotmail.com?subject=Oportunidade | Java" target="_blank"><i class="fa fa-mail-forward w3-hover-opacity"></i></a>
             </div>
 <br>
 
+	    <!-- PT-BR -->
             <div class="w3-container" style="line-height: 20px; width:80%;">
-              <h4 class="w3-text-brown"><i><b>Português</b></i></h4>
+              <h4 class="w3-text-brown toggleBRId"><i><b>Português</b></i></h4>
               <div class="w3-amber w3-round-xlarge">
-                <div class="w3-round-xlarge w3-amber" style="height:22px; width:80%; justify-content:center">&nbsp&nbsp<i>Nativo</i></div>
+                <div class="w3-round-xlarge w3-amber toggleBRId" style="height:22px; width:80%; justify-content:center">&nbsp&nbsp<i>Nativo</i></div>
               </div>
-            </div><br>
+            </div>
+            <!-- EN-US -->
+            <div class="w3-container" style="line-height: 20px; width:80%;">
+              <h4 class="w3-text-brown toggleUSId"><i><b>Portuguese</b></i></h4>
+              <div class="w3-amber w3-round-xlarge">
+                <div class="w3-round-xlarge w3-amber toggleUSId" style="height:22px; width:80%; justify-content:center">&nbsp&nbsp<i>Native</i></div>
+              </div>
+            </div>
             
+            <br>
+            
+            <!-- PT-BR -->
             <div class="w3-container" style="line-height: 20px; width: 80%">
-              <h4 class="w3-text-brown"><i><b>Inglês</b></i></h4>
+              <h4 class="w3-text-brown toggleBRId"><i><b>Inglês</b></i></h4>
               <div class="w3-round-xlarge">
-                <div class="w3-round-xlarge w3-amber" style="height:22px; width:70%; justify-content:center">&nbsp&nbsp<i>Intermediário</i></div>
+                <div class="w3-round-xlarge w3-amber toggleBRId" style="height:22px; width:70%; justify-content:center">&nbsp&nbsp<i>Intermediário</i></div>
+              </div>
+            </div>
+            <!-- EN-US -->            
+            <div class="w3-container" style="line-height: 20px; width: 80%">
+              <h4 class="w3-text-brown toggleUSId"><i><b>English</b></i></h4>
+              <div class="w3-round-xlarge">
+                <div class="w3-round-xlarge w3-amber toggleUSId" style="height:22px; width:70%; justify-content:center">&nbsp&nbsp<i>Intermediate</i></div>
               </div>
             </div>
             <br><br>
@@ -86,60 +194,123 @@
         <!-- Right Column -->
         <div class="w3-twothird">
           <div class="w3-container w3-margin-bottom w3-amber" style="border-radius: 20px">
-            <h2 class="w3-text-brown w3-margin-top w3-margin-left" style="font-size: 24px; line-height: 10px; padding-top: 4px">
+            
+            <!-- PT-BR -->
+            <h2 class="w3-text-brown w3-margin-top w3-margin-left toggleBRId" style="font-size: 24px; line-height: 10px; padding-top: 4px">
             	</i><b>Sobre mim</b></h2>
-            <h4 class="w3-text-black w3-margin-left w3-margin-right" style="text-align: justify; line-height: 24px; font-size: 16px">
+	    <!-- EN-US -->
+	    <h2 class="w3-text-brown w3-margin-top w3-margin-left toggleUSId" style="font-size: 24px; line-height: 10px; padding-top: 4px">
+            	</i><b>About me</b></h2>
+            
+            <!-- PT-BR -->
+            <h4 class="w3-text-black w3-margin-left w3-margin-right toggleBRId" style="text-align: justify; line-height: 24px; font-size: 16px">
 			Sou Desenvolvedor Back-End Java atuando com Hybris (SAP Commerce Cloud) tanto na sustentação de e-commerce quanto na implementação de novos projetos, para B2C e B2B. Possuo habilidades com MySql, PostgreSql, Jenkins, Postman, Putty, FileZilla, Microserviços, Spring Boot, Unit Test, Metodologia Ágil - Scrum e Linux.
             Desenvolvo projetos pessoais nas horas vagas, como e-commerce em Java/Angular, sistema de gerenciamento de alunos em Java Web e sistema de reserva de salas de reunião online com Spring Boot.</h4>
+            <!-- EN-US -->
+            <h4 class="w3-text-black w3-margin-left w3-margin-right toggleUSId" style="text-align: justify; line-height: 24px; font-size: 16px">
+			I'm a Java Back-End Developer with Hybris (SAP Commerce Cloud) both in support of e-commerce and in the implementation of new projects, for B2C and B2B. I have skills with MySql, PostgreSql, Jenkins, Postman, Putty, FileZilla, Microservices, Spring Boot, Unit Test, Agile Methodology - Scrum and Linux. I develop personal projects in my free time, such as e-commerce in Java/Angular, student management system in Java Web and online meeting room reservation system with Spring Boot.</h4>
           </div>
           
           <div class="w3-container w3-margin-bottom w3-light-gray">
-            <p class="w3-text-brown"><b style="font-size: 28px; line-height: 18px">Experiência Profissional</b></p>
-            <b class="w3-text-amber" style="font-size: 18px">Desenvolvedor Back-End Java | Hybris</b>	    
-			<h3 class="w3-text-black" style="font-size: 18px"><b>UltraCon | Claro Telecom</b>
-			| jul/2023 a <span class="w3-tag w3-amber w3-text-white w3-round">atual</span></h3>
-			<spam style="font-size: 16px">
-			Desenvolvedor back-end Java na squad do projeto Claro Dependentes;<br> 
+            
+            <!-- PT-BR -->
+            <p class="w3-text-brown toggleBRId"><b style="font-size: 28px; line-height: 18px">Experiência Profissional</b></p>
+            <b class="w3-text-amber toggleBRId" style="font-size: 18px">Desenvolvedor Back-End Java Hybris</b>	    
+			<h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Global Hitts | Claro Telecom</b>
+			| Julho/2023 a <span class="w3-tag w3-amber w3-text-white w3-round">atual</span></h3>
+			<spam class="toggleBRId" style="font-size: 16px">
+			Desenvolvimento back-end Java Hybris na squad do projeto Claro Dependentes;<br> 
 			Rotinas de Gestão Ágil - Scrum;<br>
-			Rotina com Linux, Git, Bitbucket, Jira, Putty, FileZilla, Postman, entre outras ferramentas;</spam><br>
+			Rotina com Linux, Git, Bitbucket, Jira, Putty, FileZilla, Postman, entre outras ferramentas.</spam>
+	    
+	    <!-- EN-US -->
+            <p class="w3-text-brown toggleUSId"><b style="font-size: 28px; line-height: 18px">Professional Experience</b></p>
+            <b class="w3-text-amber toggleUSId" style="font-size: 18px">Back-End Java Hybris Developer</b>	    
+			<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Global Hitts | Claro Telecom</b>
+			| July/2023 to <span class="w3-tag w3-amber w3-text-white w3-round">current</span></h3>
+			<spam class="toggleUSId" style="font-size: 16px">
+			Back-End Java Developer at the "Claro Dependentes" project squad;<br> 
+			Agile Management Practices - Scrum;<br>
+			Proficient in Linux, Git, Bitbucket, Jira, Putty, FileZilla, Postman, and other tools.</spam><br>
           
             <br>
-			<b class="w3-text-amber" style="font-size: 18px">Desenvolvedor Back-End Java</b>	    
-	      	<h3 class="w3-text-black" style="font-size: 18px"><b>Cantustore</b>
-	      	| nov/2021 a jun/2023</h3>
-	      	<spam style="font-size: 16px">
+                <!-- PT-BR -->
+		<b class="w3-text-amber toggleBRId" style="font-size: 18px">Desenvolvedor Back-End Java</b>	    
+	      	<h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Cantustore</b>
+	      	| Novembro/2021 a Junho/2023</h3>
+	      	<spam style="font-size: 16px" class="toggleBRId">
 	      	Levantamento de requisitos e estimativas - Plannings, Dailies, Retrôs;<br> 
 			Análise e implementação de novas features (Sustentação);<br>
 			Implementação de novos projetos (VerumLog, Neoway, Nupay, FieldService);<br>
 			Vivência nas rotinas de Gestão Ágil - Scrum;<br>
 			Rotina com Linux, Git, Bitbucket, Jira, Putty, FileZilla, Postman, entre outras ferramentas;<br>
 			Deploy nos ambientes de QA pelo Jenkins.</spam>
+		<!-- EN-US -->
+		<b class="w3-text-amber toggleUSId" style="font-size: 18px">Back-End Java Developer</b>	    
+	      	<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Cantustore</b>
+	      	| November/2021 to June/2023</h3>
+	      	<spam style="font-size: 16px" class="toggleUSId">
+	      	Requirements gathering and estimation - Plannings, Dailies, Retrospectives;<br> 
+			Analysis and implementation of new features (Maintenance);<br>
+			Implementation of new projects (VerumLog, Neoway, Nupay, FieldService);<br>
+			Experience with Agile Management practices - Scrum;<br>
+			Proficient in Linux, Git, Bitbucket, Jira, Putty, FileZilla, Postman, and other tools;<br>
+			Deployment to QA environments using Jenkins.</spam>
     	  </div>
           
-          <div class="w3-container w3-margin-bottom w3-light-gray">
-            <p class="w3-text-brown"><b style="font-size: 28px; line-height: 18px">Formação</b></p>
-            <b class="w3-text-amber" style="font-size: 18px">Bacharel em Administração de Empresas</b>
-		  	<h3 class="w3-text-black" style="font-size: 18px"><b>UNIP - Universidade Paulista</b>
-	      	| fev/2008 a dez/2011</h3>
-	      	<spam style="font-size: 16px">Curso Presencial, campus Chácara Santo Antônio - São Paulo/SP. Concluído, colação de grau e diploma. Atuei na área por 13 anos e em 2021 migrei para a carreira de TI.</spam><br>
-			<br>
-
+          <div class="w3-container w3-margin-bottom w3-light-gray toggleBRId">
+            <br>
+            <!-- PT-BR -->
+            <p class="w3-text-brown toggleBRId"><b style="font-size: 28px; line-height: 18px">Formação</b></p>
+            <b class="w3-text-amber toggleBRId" style="font-size: 18px">Bacharel em Administração de Empresas</b>
+	    <h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>UNIP - Universidade Paulista</b> | Fevereiro/2008 a Dezembro/2011</h3>
+	    <spam style="font-size: 16px" class="toggleBRId">Curso Presencial, campus Chácara Santo Antônio - São Paulo/SP. Concluído, colação de grau e diploma. Atuei na área por 13 anos e em 2021 migrei para a carreira de TI.</spam>            
+            <b class="w3-text-amber toggleBRId" style="font-size: 18px">Desenvolvimento Web Back-End</b>
+            <h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Blue EdTech</b> | mai/2021 a abr/2022</h3>
+            <spam style="font-size: 16px" class="toggleBRId">Aulas online ao vivo, de segunda a sexta-feira, módulos semestrais, com entrega de projetos em cada módulo.<br>
+            Tive a oportunidade de realizar projetos em Python e C#.</spam><br>
+            <spam class="w3-tag w3-amber w3-text-black w3-round w3-hover-brown" style="font-size:1.2rem"><a href="https://drive.google.com/file/d/1mSMXEUPuyJcg5pYDWKJvbzuoNH50pScE/view?usp=sharing" target="_blank" style="text-decoration: none" class="toggleBRId">Acesse aqui o certificado</a></spam>
             
-            <b class="w3-text-amber" style="font-size: 18px">Desenvolvimento Web Back-End</b>
-            <h3 class="w3-text-black" style="font-size: 18px"><b>Blue EdTech</b>
-		  | mai/2021 a abr/2022</h3><spam style="font-size: 16px">Aulas online ao vivo, de segunda a sexta-feira, módulos semestrais, com entrega de projetos em cada módulo.
-<br>Tive a oportunidade de realizar projetos em Python e C#.</spam><br>
-            <spam class="w3-tag w3-amber w3-text-black w3-round w3-hover-brown style="font-size:1.2rem"><a href="https://drive.google.com/file/d/1mSMXEUPuyJcg5pYDWKJvbzuoNH50pScE/view?usp=sharing" target="_blank" style="text-decoration: none">Acesse aqui o certificado</a></spam><br>
-          </div>          
-
-          <div class="w3-container w3-light-gray" style="line-height: 22px">
-            <p class="w3-text-brown"><b style="font-size: 28px; line-height: 25px"></i><i>Lifelong Learning</i></p></b>
+            </div>
             
-			<b class="w3-text-amber" style="font-size: 18px">Lógica de Programação | </b><spam class="w3-text-black">Softblue</spam><br>
-			<b class="w3-text-amber" style="font-size: 18px">Java Fundamentos | </b><spam class="w3-text-black">Softblue</spam><br>
-			<b class="w3-text-amber" style="font-size: 18px">Java Avançado | </b><spam class="w3-text-black">Softblue</spam><br>
-			<b class="w3-text-amber" style="font-size: 18px">Java Back-End Developer com Spring Boot | </b><spam class="w3-text-black">Softblue</spam><br>
-			<b class="w3-text-amber" style="font-size: 18px">Bootcamps | </b><spam class="w3-text-black">Dio.me</spam><br><br>
+            <!-- EN-US -->
+            <div class="w3-container w3-margin-bottom w3-light-gray toggleUSId">
+            <br>
+            <p class="w3-text-brown toggleUSId"><b style="font-size: 28px; line-height: 18px">Education</b></p>
+            <b class="w3-text-amber toggleUSId" style="font-size: 18px">Bachelor of Business Administration</b>
+		  	<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>UNIP - Universidade Paulista</b>
+	      	| Febuary/2008 to December/2011</h3>
+	      	<spam style="font-size: 16px" class="toggleUSId">On-site course, Chácara Santo Antônio campus - São Paulo/SP. Completed, graduation ceremony and diploma received. Worked in the field for 13 years and transitioned to a career in IT in 2021.</spam>
+            
+            <b class="w3-text-amber toggleUSId" style="font-size: 18px">Web Back-End Development</b>
+            <h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Blue EdTech</b>
+		  | Maio/2021 to April/2022</h3><spam style="font-size: 16px" class="toggleUSId">Live online classes, from Monday to Friday, on a semester basis, with project submissions for each module.<br>Had the opportunity to work on projects using Python and C#..</spam><br>
+            <spam class="w3-tag w3-amber w3-text-black w3-round w3-hover-brown" style="font-size:1.2rem"><a href="https://drive.google.com/file/d/1mSMXEUPuyJcg5pYDWKJvbzuoNH50pScE/view?usp=sharing" target="_blank" style="text-decoration: none" class="toggleUSId">Access the certificate here</a></spam>
+            
+          </div><br>         
+
+	  <!-- PT-BR -->
+          <div class="w3-container w3-light-gray toggleBRId" style="line-height: 22px">
+            <p class="w3-text-brown toggleBRId"><b style="font-size: 28px; line-height: 25px"></i><i>Lifelong Learning</i></p></b>
+            
+    		<!-- PT-BR -->
+		<h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Lógica de Programação &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Java Fundamentos &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Java Avançado &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Java Back-End Developer com Spring Boot &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleBRId" style="font-size: 18px"><b>Bootcamps / Cursos / Formações &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.dio.me/" target="_blank" style="text-decoration: none">Dio.me</a></spam></h3><br>
+		
+	  </div>
+	  <!-- EN-US -->
+          <div class="w3-container w3-light-gray toggleUSId" style="line-height: 22px">
+            <p class="w3-text-brown toggleUSId"><b style="font-size: 28px; line-height: 25px"></i><i>Lifelong Learning</i></p></b>
+			<!-- EN-US -->
+			<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Programming Logic &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Java Fundamentals &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Advanced Java &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Java Back-End Developer with Spring Boot &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.softblue.com.br/" target="_blank" style="text-decoration: none">Softblue</a></spam></h3>
+		<h3 class="w3-text-black toggleUSId" style="font-size: 18px"><b>Bootcamps / Courses / Training Programs &nbsp</b><spam class="w3-tag w3-amber w3-text-white w3-round w3-hover-brown"><a href="https://www.dio.me/" target="_blank" style="text-decoration: none">Dio.me</a></spam></h3><br>
+		
           </div>
 
         <!-- End Right Column -->
@@ -151,10 +322,71 @@
     <!-- End Page Container -->
     </div>
   
-    <footer class="w3-container w3-amber w3-center w3-margin-left w3-margin-right" style="line-height: 5px">      
-      <p style="font-size: 14px"><i>Powered by </i><a href="https://www.w3schools.com/w3css/default.asp" target="_blank" style="text-decoration: none"><b>w3.css</b></a></p>
+    <!-- PT-BR -->
+    <footer class="w3-container w3-amber w3-center w3-margin-left w3-margin-right toggleBRId" style="line-height: 5px">      
+      <p class="toggleBRId" style="font-size: 14px"><i>Desenvolvido por </i><a href="https://www.w3schools.com/w3css/default.asp" target="_blank" style="text-decoration: none"><b>w3.css</b></a></p>
     </footer>
+    
+    <!-- PT-BR -->
+    <footer class="w3-container w3-amber w3-center w3-margin-left w3-margin-right toggleUSId" style="line-height: 5px">      
+      <p class="toggleUSId" style="font-size: 14px"><i>Powered by </i><a href="https://www.w3schools.com/w3css/default.asp" target="_blank" style="text-decoration: none"><b>w3.css</b></a></p>
+    </footer>
+    
+    <script>    
+    	const btn = document.getElementById('switch');
+       	var divsBR = document.querySelectorAll('.toggleBRId');
+       	var divsUS = document.querySelectorAll('.toggleUSId');
+    	var toggle = false;
+    	
+    	btn.addEventListener("click", () => {
+    		toggle = !toggle;    		
+    		
+    		if (toggle == false) {   		
+    			divsBR.forEach((toggleBRId) => {
+    				setTimeout(() => {
+    					document.querySelector('.iconAndTextPT-BR').style.color = "green";
+	    				document.querySelector('.iconAndTextEN-US').style.color = "gray";
+	    				replaceClass("imgColorUS", "colorUS", "imgCinza");
+	    				replaceClass("imgColorBR", "imgCinza", "colorBR");
+    					toggleBRId.style.display = 'block';
+    					
+    				}, 200);
+    			});
+    			
+    			divsUS.forEach((toggleUSId) => {
+    				setTimeout(() => {
+    					toggleUSId.style.display = 'none';
+    				}, 200);
+    			});
+  		} else {
+  			divsBR.forEach((toggleBRId) => {
+  				setTimeout(() => {
+  					document.querySelector('.iconAndTextPT-BR').style.color = "gray";
+  					document.querySelector('.iconAndTextEN-US').style.color = "brown";
+  					replaceClass("imgColorBR", "colorBR", "imgCinza");
+  					replaceClass("imgColorUS","imgCinza","colorUS");
+    					toggleBRId.style.display = 'none';
+    				}, 200);
+    			});
+    			
+    			divsUS.forEach((toggleUSId) => {
+    				setTimeout(() => {
+    					toggleUSId.style.display = 'block';
+    				}, 200);
+    			});
+		}
+	});
+	
+	function replaceClass(id, oldClass, newClass) {
+	    var elem = document.getElementById(id);
+	    elem.classList.remove(oldClass);
+	    elem.classList.add(newClass);
+	}
+			
+    	
+  </script>
   
   </body>
+  
 
 </html>
